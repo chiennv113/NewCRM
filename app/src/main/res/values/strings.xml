@@ -28,4 +28,27 @@
     <string name="nav_menu_sale">Sale</string>
     <string name="nav_menu_customer">Customer</string>
 
+    =============
+    <string name="ninjapm">Ninja Phần Mềm</string>
+    <string name="tvPhanMen">Phần mềm quan tâm</string>
+    <string name="hint_content_search">Nhập sđt hoặc email</string>
+    <string name="act_static_socuocgoi">Số cuộc gọi</string>
+    <string name="ThemCG">Thêm cuộc gọi mới</string>
+    <string name="tvZalo">Zalo</string>
+    <string name="tvSkype">Skype</string>
+    <string name="tvTP">Thành phố</string>
+    <string name="tvNgaySinh">Ngày sinh</string>
+    <string name="tvDC">Địa chỉ</string>
+    <string name="tvDoiTuong">Đối tượng khách hàng</string>
+    <string name="tvNguonKhach">Nguồn khách</string>
+    <string name="tvLoaiKH">Loại khách hàng</string>
+    <string name="tvNDCuocGoi">Nội dung cuộc gọi</string>
+    <string name="tvTTKH">Trạng thái khách hàng</string>
+    <string name="tvGhiChu">Ghi chú</string>
+    <string name="btn_luu">Lưu</string>
+    <string name="tvTenKH">Tên Khách hàng</string>
+    <string name="tvSdt">Số điện thoại</string>
+    <string name="tvEmail">Email</string>
+
+
 </resources>
