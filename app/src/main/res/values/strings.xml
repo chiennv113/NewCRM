@@ -14,7 +14,7 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="nav_menu_dashboard">Dashboard</string>
-    <string name="nav_menu_call">Call</string>
+    <string name="nav_menu_call"></string>
     <string name="nav_menu_ticket">Ticket</string>
     <string name="nav_menu_sale">Sale</string>
     <string name="nav_menu_customer">Customer</string>
