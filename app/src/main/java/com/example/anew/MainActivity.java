@@ -1,5 +1,6 @@
 package com.example.anew;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -22,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
@@ -44,11 +46,6 @@ public class MainActivity extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-        Bundle bundle = new Bundle();
-        bundle.putString("edttext", "From Activity");
-        GalleryFragment fragobj = new GalleryFragment();
-        fragobj.setArguments(bundle);
-
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
                 R.id.nav_tools, R.id.nav_customer)
@@ -57,14 +54,20 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-        String abc = "abc";
 
-        SharedPreferences.Editor editor = getSharedPreferences("cookie", MODE_PRIVATE).edit();
-        editor.putString("name", abc);
-        editor.apply();
 
-        SharedPreferences prefs = getSharedPreferences("cookie", MODE_PRIVATE);
-        String name = prefs.getString("name", "No name defined");
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        View headerView = navigationView.getHeaderView(0);
+        TextView nav_name = (TextView) headerView.findViewById(R.id.nav_tv_name);
+        TextView nav_email = (TextView) headerView.findViewById(R.id.nav_tv_email);
+        if (bundle != null) {
+            String name = bundle.getString("name");
+            String email = bundle.getString("email");
+            nav_email.setText(email);
+            nav_name.setText(name);
+        }
+
 
     }
 
@@ -80,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-
 
 
 }

@@ -20,19 +20,10 @@ import com.example.anew.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class GalleryFragment extends Fragment {
-    private static final String KEY_COOKIE = "GalleryFragment.KEY_COOKIE";
 
     private GalleryViewModel galleryViewModel;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
-
-    public static Fragment newInstance(String abc) {
-        Fragment fragment = new GalleryFragment();
-        Bundle args = new Bundle();
-        args.putString(KEY_COOKIE, abc);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -60,20 +51,6 @@ public class GalleryFragment extends Fragment {
             drawable.setSize(2, 1);
         }
 
-
-        if (getArguments() != null) {
-            String cookie = getArguments().getString(KEY_COOKIE);
-            Log.e("cookie in gallery", "onCreateView: "+cookie );
-
-        }
-
-
-        galleryViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-
-            }
-        });
         return root;
 
 

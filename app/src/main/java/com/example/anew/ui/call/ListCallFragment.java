@@ -12,7 +12,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.anew.Model.ModelSearchCu.Search;
 import com.example.anew.R;
+import com.example.anew.Retrofit.ApiClient;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ListCallFragment extends Fragment {
     private static final String KEY_COOKIE = "ListCallFragment.KEY_COOKIE";
@@ -34,7 +40,23 @@ public class ListCallFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         SharedPreferences prefs = getActivity().getSharedPreferences("cookie", Context.MODE_PRIVATE);
-        String name = prefs.getString("name", "No name defined");
-        Log.e("sharedPre", "onViewCreated: " + name);
+        String cookie = prefs.getString("cookie_name", "No name defined");
+        Log.e("sharedPre", "onViewCreated: " + cookie);
+
+
+    }
+
+    public void search(String info, String option, String cookie, String content) {
+        ApiClient.getInstance().search(info, option, cookie, content).enqueue(new Callback<Search>() {
+            @Override
+            public void onResponse(Call<Search> call, Response<Search> response) {
+                
+            }
+
+            @Override
+            public void onFailure(Call<Search> call, Throwable t) {
+
+            }
+        });
     }
 }
