@@ -1,6 +1,9 @@
 package com.example.anew.ui.call;
 
+
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -20,12 +23,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.anew.Activity.MainActivity;
 import com.example.anew.Model.ModelAdd;
 import com.example.anew.Model.ModelCustomeFeelNew;
 import com.example.anew.R;
 import com.example.anew.Retrofit.ApiClient;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,6 +42,7 @@ public class Result_Info_Dialog extends DialogFragment {
     private TextView mTvRsEmail;
     private Button mDialogBtnOk;
     private Button mDialogBtnNo;
+    private Context context;
 
     public static Result_Info_Dialog newInstance(String name, String email, String content, int cus_id) {
         Result_Info_Dialog dialog = new Result_Info_Dialog();
@@ -120,7 +127,7 @@ public class Result_Info_Dialog extends DialogFragment {
         ApiClient.getInstance().add(option, id, content, cus_feel, cookie, type).enqueue(new Callback<ModelAdd>() {
             @Override
             public void onResponse(Call<ModelAdd> call, Response<ModelAdd> response) {
-                Toast.makeText(getContext(), "" + response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "" + response.body().getMessage(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -130,17 +137,18 @@ public class Result_Info_Dialog extends DialogFragment {
     }
 
     public void onResume() {
-        // Store access variables for window and blank point
         Window window = getDialog().getWindow();
         Point size = new Point();
-        // Store dimensions of the screen in size
         Display display = window.getWindowManager().getDefaultDisplay();
         display.getSize(size);
-        // Set the width of the dialog proportional to 75% of the screen width
         window.setLayout((int) (size.x * 0.75), WindowManager.LayoutParams.WRAP_CONTENT);
         window.setGravity(Gravity.CENTER);
-        // Call super onResume after sizing
         super.onResume();
 
+    }
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        this.context = context;
     }
 }

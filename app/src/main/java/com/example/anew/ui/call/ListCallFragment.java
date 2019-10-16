@@ -1,6 +1,5 @@
 package com.example.anew.ui.call;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -8,26 +7,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.anew.Model.ModelAdd;
-import com.example.anew.Model.ModelCustomeFeelNew;
 import com.example.anew.Model.ModelSearchCu.Search;
 import com.example.anew.R;
 import com.example.anew.Retrofit.ApiClient;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
