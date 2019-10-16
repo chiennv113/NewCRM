@@ -19,16 +19,13 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.anew.R;
 import com.google.android.material.tabs.TabLayout;
 
-public class GalleryFragment extends Fragment {
+public class CallFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
         initView(root);
 

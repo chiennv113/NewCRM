@@ -1,4 +1,4 @@
-package com.example.anew;
+package com.example.anew.Activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.anew.Model.ModelLogin.Login;
+import com.example.anew.R;
 import com.example.anew.Retrofit.ApiClient;
 import com.google.android.material.textfield.TextInputEditText;
 

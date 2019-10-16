@@ -23,7 +23,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
                 frag = new RemindFragment();
                 break;
             case 2:
-                frag = new DashboardFragment();
+                frag = new DashboardFragmentInCall();
                 break;
         }
         return frag;

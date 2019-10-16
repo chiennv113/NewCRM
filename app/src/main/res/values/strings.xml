@@ -28,27 +28,32 @@
     <string name="nav_menu_sale">Sale</string>
     <string name="nav_menu_customer">Customer</string>
 
-    =============
-    <string name="ninjapm">Ninja Phần Mềm</string>
-    <string name="tvPhanMen">Phần mềm quan tâm</string>
-    <string name="hint_content_search">Nhập sđt hoặc email</string>
-    <string name="act_static_socuocgoi">Số cuộc gọi</string>
-    <string name="ThemCG">Thêm cuộc gọi mới</string>
-    <string name="tvZalo">Zalo</string>
-    <string name="tvSkype">Skype</string>
-    <string name="tvTP">Thành phố</string>
-    <string name="tvNgaySinh">Ngày sinh</string>
-    <string name="tvDC">Địa chỉ</string>
-    <string name="tvDoiTuong">Đối tượng khách hàng</string>
-    <string name="tvNguonKhach">Nguồn khách</string>
-    <string name="tvLoaiKH">Loại khách hàng</string>
-    <string name="tvNDCuocGoi">Nội dung cuộc gọi</string>
-    <string name="tvTTKH">Trạng thái khách hàng</string>
-    <string name="tvGhiChu">Ghi chú</string>
-    <string name="btn_luu">Lưu</string>
-    <string name="tvTenKH">Tên Khách hàng</string>
-    <string name="tvSdt">Số điện thoại</string>
+    <string name="tvTenKH">Name</string>
+    <string name="tvSdt">Phone Number</string>
     <string name="tvEmail">Email</string>
+    <string name="frg_result_search">Data</string>
+    <string name="dialog_addCall">Do you want add call</string>
+    <string name="dialog_btn_ok">ok</string>
+    <string name="dialog_btn_no">no</string>
+    <string name="dialog_rs_search">Result</string>
+    <string name="act_add_phone">Phone Number</string>
+    <string name="act_add_edt_phone">Phone number</string>
+    <string name="act_add_edt_name">Name</string>
+    <string name="act_add_edt_email">Email</string>
+    <string name="act_add_edt_zalo">Zalo</string>
+    <string name="act_add_edt_skype">Skype</string>
+    <string name="tv_city">City</string>
+    <string name="act_add_edt_address">Address</string>
+    <string name="act_add_edt_dateOfBirth">Date Of Birth</string>
+    <string name="tv_soft_ware_care">Soft Ware Care</string>
+    <string name="tv_obj_customer">Object Customer</string>
+    <string name="act_add_edt_source_customer">Source Customer</string>
+    <string name="tv_customer_type">Customer Type</string>
+    <string name="act_add_edt_content">Content</string>
+    <string name="tv_customer_status">Customer Status</string>
+    <string name="act_add_note">Note</string>
+    <string name="btn_save">Save</string>
+    <string name="fragment_listCall_search">Search</string>
 
 
 </resources>
