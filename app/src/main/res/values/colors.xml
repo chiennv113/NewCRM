@@ -5,7 +5,7 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="colorBackgroud">#FFFEFE</color>
-    <color name="colorBgEdt">#000000</color>
+    <color name="colorBgEdt">#070707</color>
     <color name="Pink">#fe485a</color>
     <color name="colorBackgroundLogin">#3385ff</color>
     <color name="colorStrokeBtnLogin">#0073e6</color>
@@ -15,5 +15,7 @@
     <color name="white">#FFFEFE</color>
     <color name="DarkOrange">#FF8C00</color>
     <color name="colorBlue">#3176fe</color>
+    <color name="start_color">#F9BA53</color>
+    <color name="end_color">#f87e2e</color>
 
 </resources>
