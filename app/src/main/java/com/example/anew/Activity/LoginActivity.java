@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.anew.Model.ModelLoadCity;
 import com.example.anew.Model.ModelLogin.Login;
 import com.example.anew.R;
 import com.example.anew.Retrofit.ApiClient;
@@ -42,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         mEdtUser.setText("app@ninjateam.vn");
         logins = new ArrayList<>();
 
-
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,7 +57,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
 
     }
 
@@ -94,8 +93,8 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.body().getMessage().equals("Đăng nhập thành công")) {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     Bundle bundle = new Bundle();
-                    bundle.putString("name",name);
-                    bundle.putString("email",email);
+                    bundle.putString("name", name);
+                    bundle.putString("email", email);
                     intent.putExtras(bundle);
                     startActivity(intent);
                 }

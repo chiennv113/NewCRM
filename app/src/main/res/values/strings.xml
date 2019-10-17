@@ -55,6 +55,7 @@
     <string name="btn_save">Save</string>
     <string name="fragment_listCall_search">Search</string>
     <string name="dialog_tb_ok">Success</string>
+    <string name="tv_source_customer">Customer Base</string>
 
 
 </resources>
