@@ -15,12 +15,12 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.anew.R;
 
-public class HomeFragment extends Fragment {
+public class DashboardFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+<<<<<<< HEAD:app/src/main/java/com/example/anew/ui/dashboard/HomeFragment.java
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -32,6 +32,9 @@ public class HomeFragment extends Fragment {
 //                Log.e("abcde", "onChanged: "+s );
 //            }
 //        });
+=======
+        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+>>>>>>> b8a9116b60e7598c52f99e84a0af2d07ba7476a6:app/src/main/java/com/example/anew/ui/dashboard/DashboardFragment.java
         return root;
     }
 }

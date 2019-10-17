@@ -1,12 +1,15 @@
-package com.example.anew;
+package com.example.anew.Activity;
 
+<<<<<<< HEAD:app/src/main/java/com/example/anew/MainActivity.java
 import android.app.ActionBar;
 import android.content.SharedPreferences;
+=======
+import android.content.Intent;
+>>>>>>> b8a9116b60e7598c52f99e84a0af2d07ba7476a6:app/src/main/java/com/example/anew/Activity/MainActivity.java
 import android.os.Bundle;
 
-import com.example.anew.ui.call.GalleryFragment;
+import com.example.anew.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
 
@@ -23,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
@@ -44,21 +48,18 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+//
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                startActivity(new Intent(MainActivity.this, AddCallActivity.class));
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-
-        Bundle bundle = new Bundle();
-        bundle.putString("edttext", "From Activity");
-        GalleryFragment fragobj = new GalleryFragment();
-        fragobj.setArguments(bundle);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
@@ -68,14 +69,20 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-        String abc = "abc";
 
-        SharedPreferences.Editor editor = getSharedPreferences("cookie", MODE_PRIVATE).edit();
-        editor.putString("name", abc);
-        editor.apply();
 
-        SharedPreferences prefs = getSharedPreferences("cookie", MODE_PRIVATE);
-        String name = prefs.getString("name", "No name defined");
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        View headerView = navigationView.getHeaderView(0);
+        TextView nav_name = (TextView) headerView.findViewById(R.id.nav_tv_name);
+        TextView nav_email = (TextView) headerView.findViewById(R.id.nav_tv_email);
+        if (bundle != null) {
+            String name = bundle.getString("name");
+            String email = bundle.getString("email");
+            nav_email.setText(email);
+            nav_name.setText(name);
+        }
+
 
     }
 

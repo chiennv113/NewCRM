@@ -14,22 +14,13 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.anew.R;
 
-public class ToolsFragment extends Fragment {
+public class SaleFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
-        toolsViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+        View root = inflater.inflate(R.layout.fragment_sale, container, false);
         return root;
     }
 }

@@ -21,6 +21,7 @@ import com.example.anew.R;
 import com.example.anew.ui.call.PagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
+<<<<<<< HEAD:app/src/main/java/com/example/anew/ui/ticket/SlideshowFragment.java
 public class SlideshowFragment extends Fragment {
     private static final String KEY_COOKIE = "SlideshowFragment.KEY_COOKIE";
 
@@ -76,6 +77,15 @@ public class SlideshowFragment extends Fragment {
 
             }
         });
+=======
+public class TicketFragment extends Fragment {
+
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+
+        View root = inflater.inflate(R.layout.fragment_ticket, container, false);
+>>>>>>> b8a9116b60e7598c52f99e84a0af2d07ba7476a6:app/src/main/java/com/example/anew/ui/ticket/TicketFragment.java
         return root;
 
 
