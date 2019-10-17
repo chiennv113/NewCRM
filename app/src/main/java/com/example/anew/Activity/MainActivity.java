@@ -1,11 +1,9 @@
 package com.example.anew.Activity;
 
-<<<<<<< HEAD:app/src/main/java/com/example/anew/MainActivity.java
 import android.app.ActionBar;
 import android.content.SharedPreferences;
-=======
 import android.content.Intent;
->>>>>>> b8a9116b60e7598c52f99e84a0af2d07ba7476a6:app/src/main/java/com/example/anew/Activity/MainActivity.java
+
 import android.os.Bundle;
 
 import com.example.anew.R;
