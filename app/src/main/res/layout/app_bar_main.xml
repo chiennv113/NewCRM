@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/end_color"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -28,6 +28,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+<<<<<<< HEAD
+        android:src="@drawable/ic_action_add" />
+=======
         android:src="@drawable/ic_add" />
+>>>>>>> b8a9116b60e7598c52f99e84a0af2d07ba7476a6
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

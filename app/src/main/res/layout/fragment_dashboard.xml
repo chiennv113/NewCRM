@@ -5,6 +5,14 @@
     android:layout_height="match_parent">
 
     <TextView
+<<<<<<< HEAD
+        android:text="Fragment Dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+</LinearLayout>
+=======
         android:id="@+id/text_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,3 +25,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> b8a9116b60e7598c52f99e84a0af2d07ba7476a6

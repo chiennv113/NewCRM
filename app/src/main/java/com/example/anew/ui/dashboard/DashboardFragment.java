@@ -20,7 +20,21 @@ public class DashboardFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+<<<<<<< HEAD:app/src/main/java/com/example/anew/ui/dashboard/HomeFragment.java
+        homeViewModel =
+                ViewModelProviders.of(this).get(HomeViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
+//        final TextView textView = root.findViewById(R.id.text_home);
+//        homeViewModel.getText().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(s);
+//                Log.e("abcde", "onChanged: "+s );
+//            }
+//        });
+=======
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+>>>>>>> b8a9116b60e7598c52f99e84a0af2d07ba7476a6:app/src/main/java/com/example/anew/ui/dashboard/DashboardFragment.java
         return root;
     }
 }

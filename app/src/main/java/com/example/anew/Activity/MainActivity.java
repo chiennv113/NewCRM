@@ -1,6 +1,11 @@
 package com.example.anew.Activity;
 
+<<<<<<< HEAD:app/src/main/java/com/example/anew/MainActivity.java
+import android.app.ActionBar;
+import android.content.SharedPreferences;
+=======
 import android.content.Intent;
+>>>>>>> b8a9116b60e7598c52f99e84a0af2d07ba7476a6:app/src/main/java/com/example/anew/Activity/MainActivity.java
 import android.os.Bundle;
 
 import com.example.anew.R;
@@ -30,6 +35,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        /////////Hide status bar
+//        View decorView = getWindow().getDecorView();
+//        // Hide the status bar.
+//        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+//        decorView.setSystemUiVisibility(uiOptions);
+//        // Remember that you should never show the action bar if the
+//        // status bar is hidden, so hide that too if necessary.
+//        ActionBar actionBar = getActionBar();
+//        actionBar.hide();
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 //
