@@ -1,11 +1,9 @@
-
 package com.example.anew.Model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ModelAdd {
-
+public class ModelAddCallAndCustomerNew {
     @SerializedName("message")
     @Expose
     private String message;
@@ -29,5 +27,4 @@ public class ModelAdd {
     public void setError(String error) {
         this.error = error;
     }
-
 }

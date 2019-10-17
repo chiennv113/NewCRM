@@ -23,15 +23,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.example.anew.Activity.MainActivity;
 import com.example.anew.Model.ModelAdd;
 import com.example.anew.Model.ModelCustomeFeelNew;
 import com.example.anew.R;
 import com.example.anew.Retrofit.ApiClient;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -107,6 +104,7 @@ public class Result_Info_Dialog extends DialogFragment {
                     Log.e("size", "onResponse: " + response.body().size());
                     if (response.isSuccessful() && response.body() != null) {
                         for (int i = 0; i < response.body().size(); i++) {
+                            Log.e("feel", "onResponse: " + response.body().get(i).getName());
                         }
                         int positonRandom = (int) Math.floor(Math.random() * response.body().size());
                         add("add_phone_call", cus_id, content, response.body().get(positonRandom).getName(),
@@ -146,6 +144,7 @@ public class Result_Info_Dialog extends DialogFragment {
         super.onResume();
 
     }
+
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
